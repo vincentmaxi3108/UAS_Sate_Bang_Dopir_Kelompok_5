@@ -1,0 +1,672 @@
+/* =========================================
+   1. PENGATURAN WARNA DAN FONT UTAMA
+   ========================================= */
+:root {
+    /* Mengatur jenis font utama website */
+    --bs-body-font-family: 'Trebuchet MS', Arial, sans-serif;
+
+    /* Mengatur warna background dan teks utama */
+    --bs-body-bg: #FFF9F0;
+    --bs-body-color: #3B2920;
+
+    /* Membuat variabel warna agar mudah digunakan kembali */
+    --sbd-brown: #4A2C20;
+    --sbd-brown-dark: #2F1D17;
+    --sbd-orange: #D9823B;
+    --sbd-rust: #C65D2E;
+    --sbd-rust-dark: #9E4322;
+    --sbd-cream: #FFF3DD;
+    --sbd-sand: #E5CEAE;
+    --sbd-gold: #F5D6A6;
+}
+
+/* =========================================
+   2. HEADER WEBSITE
+   ========================================= */
+.site-header {
+    /* Memberikan warna cokelat pada header */
+    background-color: var(--sbd-brown);
+
+    /* Mengatur warna teks header */
+    color: #FFF9F0;
+
+    /* Memberikan garis bawah berwarna oranye */
+    border-bottom: 5px solid var(--sbd-orange);
+}
+
+.site-header h1 {
+    /* Mengatur font dan ukuran judul header */
+    font-family: 'Chewy', cursive;
+    font-size: 2.25rem;
+}
+
+/* Mengatur warna teks paragraf di dalam header */
+.site-header p {
+    color: var(--sbd-gold);
+}
+
+/* =========================================
+   3. NAVIGASI WEBSITE
+   ========================================= */
+.site-nav {
+    /* Memberikan background warna krem pada navigasi */
+    background-color: var(--sbd-cream);
+
+    /* Memberikan garis pembatas di bawah navigasi */
+    border-bottom: 1px solid #E2C9A5;
+}
+
+.site-nav .nav-link {
+    /* Mengatur warna dan ketebalan teks menu */
+    color: var(--sbd-brown);
+    font-weight: bold;
+}
+
+/* Mengubah warna menu ketika diarahkan atau sedang aktif */
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: var(--sbd-rust);
+}
+
+/* Mengatur tampilan background dan garis dropdown */
+.site-nav .dropdown-menu {
+    background-color: #FFF9F0;
+    border-color: #E2C9A5;
+}
+
+/* Mengatur warna teks pada pilihan dropdown */
+.site-nav .dropdown-item {
+    color: var(--sbd-brown);
+}
+
+/* Mengubah background dropdown ketika diarahkan */
+.site-nav .dropdown-item:hover {
+    background-color: #F5E2C3;
+}
+
+/* Mengatur dropdown agar terbuka ketika mouse diarahkan pada desktop */
+@media (min-width: 992px) {
+    .site-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+/* =========================================
+   4. KONTEN UTAMA DAN JUDUL BAGIAN
+   ========================================= */
+.main-content {
+    /* Memberikan background putih pada konten utama */
+    background-color: #fff;
+
+    /* Memberikan garis tepi pada konten */
+    border: 1px solid #E7D5BD;
+
+    /* Membuat sudut konten sedikit melengkung */
+    border-radius: 6px;
+}
+
+.section-title {
+    /* Mengatur warna judul bagian */
+    color: var(--sbd-brown);
+
+    /* Memberikan garis oranye di sebelah kiri judul */
+    border-left: 5px solid var(--sbd-orange);
+
+    /* Memberikan jarak antara garis dan teks judul */
+    padding-left: 10px;
+}
+
+/* =========================================
+   5. KARTU PRODUK
+   ========================================= */
+.product-card {
+    /* Mengatur background dan garis tepi kartu produk */
+    background-color: #FFF9F0;
+    border: 1px solid var(--sbd-sand);
+
+    /* Memberikan efek transisi saat kartu berubah */
+    transition: .2s;
+}
+
+.product-card:hover {
+    /* Mengangkat kartu sedikit ketika mouse diarahkan */
+    transform: translateY(-3px);
+
+    /* Mengubah warna garis tepi ketika diarahkan */
+    border-color: var(--sbd-rust);
+}
+
+/* Mengatur ukuran dan tampilan gambar produk */
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    /* Membuat gambar memenuhi area tanpa mengubah proporsinya */
+    object-fit: cover;
+
+    /* Menempatkan bagian tengah gambar sebagai titik fokus */
+    object-position: center;
+}
+
+/* Mengatur warna judul produk */
+.product-card .card-title {
+    color: #6B3825;
+}
+
+/* Mengatur warna dan ukuran deskripsi produk */
+.product-card .card-text {
+    color: #6E5A4E;
+    font-size: .9rem;
+}
+
+/* Memberikan garis pembatas di bagian atas informasi About */
+.about {
+    border-top: 1px solid var(--sbd-sand);
+}
+
+/* =========================================
+   6. TOMBOL UTAMA WEBSITE
+   ========================================= */
+.btn-sbd {
+    /* Mengatur warna teks, background, dan garis tombol */
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--sbd-rust);
+    --bs-btn-border-color: var(--sbd-rust);
+
+    /* Mengatur tampilan tombol ketika mouse diarahkan */
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--sbd-rust-dark);
+    --bs-btn-hover-border-color: var(--sbd-rust-dark);
+
+    /* Mengatur warna tombol ketika sedang ditekan */
+    --bs-btn-active-bg: var(--sbd-rust-dark);
+    --bs-btn-active-border-color: var(--sbd-rust-dark);
+
+    /* Membuat tulisan tombol menjadi tebal */
+    font-weight: bold;
+}
+
+/* =========================================
+   7. KOTAK SAMPING / SIDEBAR
+   ========================================= */
+.side-box {
+    /* Mengatur warna background dan teks sidebar */
+    background-color: var(--sbd-brown);
+    color: #F3E4D2;
+
+    /* Membuat sudut sidebar sedikit melengkung */
+    border-radius: 6px;
+}
+
+/* Mengatur warna judul di dalam sidebar */
+.side-box h2 {
+    color: var(--sbd-gold);
+}
+
+/* =========================================
+   8. TABEL
+   ========================================= */
+.table-sbd {
+    /* Mengatur warna baris tabel bergantian */
+    --bs-table-striped-bg: #FFF1DA;
+
+    /* Mengatur warna background ketika baris diarahkan */
+    --bs-table-hover-bg: #F5DFC0;
+
+    /* Mengatur warna garis tabel */
+    --bs-table-border-color: var(--sbd-sand);
+}
+
+.table-sbd thead th {
+    /* Mengatur background dan warna teks bagian kepala tabel */
+    background-color: var(--sbd-brown);
+    color: #FFF9F0;
+}
+
+/* =========================================
+   9. FORM INPUT DAN SELECT
+   ========================================= */
+
+/* Mengatur background dan garis pada input serta dropdown */
+.form-control,
+.form-select {
+    background-color: #FFFDF9;
+    border-color: #D8BE9B;
+}
+
+/* Mengatur tampilan input ketika sedang dipilih */
+.form-control:focus,
+.form-select:focus {
+    /* Mengubah warna garis input */
+    border-color: var(--sbd-rust);
+
+    /* Memberikan efek bayangan pada input yang aktif */
+    box-shadow: 0 0 0 .2rem rgba(198, 93, 46, .2);
+}
+
+/* Mengubah warna checkbox ketika dicentang */
+.form-check-input:checked {
+    background-color: var(--sbd-rust);
+    border-color: var(--sbd-rust);
+}
+
+/* Mengatur ketebalan dan warna teks label form */
+.form-label {
+    font-weight: bold;
+    color: var(--sbd-brown);
+}
+
+/* =========================================
+   10. FOOTER WEBSITE
+   ========================================= */
+.site-footer {
+    /* Mengatur background dan warna teks footer */
+    background-color: var(--sbd-brown-dark);
+    color: #F5E5D0;
+}
+
+/* Mengatur tampilan teks tebal di dalam footer */
+.site-footer strong {
+    color: var(--sbd-gold);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   11. TOPBAR DAN IDENTITAS WEBSITE
+   ========================================= */
+.topbar {
+    /* Mengatur warna background, teks, dan garis bawah topbar */
+    background-color: var(--sbd-brown);
+    color: #FFF9F0;
+    border-bottom: 4px solid var(--sbd-orange);
+}
+
+/* Mengatur tampilan nama atau logo website */
+.brand {
+    font-family: 'Chewy', cursive;
+    font-size: 2rem;
+    color: var(--sbd-gold);
+}
+
+/* Mengatur teks deskripsi singkat di samping brand */
+.brand-tag {
+    color: #F3E4D2;
+    font-size: .9rem;
+}
+
+/* Mengatur warna informasi waktu pada topbar */
+.topbar-time {
+    color: #F3E4D2;
+}
+
+/* Memastikan isi navigasi sejajar di bagian tengah */
+.site-nav .navbar-collapse {
+    align-items: center;
+}
+
+/* =========================================
+   12. TOMBOL IKON
+   ========================================= */
+.icon-btn {
+    /* Mengatur ukuran tombol ikon */
+    width: 36px;
+    height: 36px;
+
+    /* Menggunakan flex agar ikon berada di tengah */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Mengatur garis tepi, sudut, dan warna tombol */
+    border: 1px solid var(--sbd-sand);
+    border-radius: 6px;
+    color: var(--sbd-brown);
+
+    /* Menghilangkan garis bawah seperti pada link */
+    text-decoration: none;
+}
+
+/* Mengubah tampilan tombol ikon ketika diarahkan atau dipilih dengan keyboard */
+.icon-btn:hover,
+.icon-btn:focus-visible {
+    background-color: var(--sbd-rust);
+    border-color: var(--sbd-rust);
+    color: #fff;
+}
+
+/* =========================================
+   13. BAGIAN HERO / BANNER UTAMA
+   ========================================= */
+.hero {
+    /* Memberikan background gradasi dari cokelat ke merah gelap */
+    background: linear-gradient(120deg, var(--sbd-brown) 0%, var(--sbd-rust-dark) 100%);
+
+    /* Mengatur warna teks, sudut, dan area yang tidak boleh keluar */
+    color: #FFF9F0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Mengatur tampilan label kecil pada bagian hero */
+.hero-badge {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    font-weight: bold;
+    font-size: .8rem;
+    padding: .25rem .6rem;
+    border-radius: 4px;
+}
+
+/* Mengatur ukuran, ketebalan, dan jarak baris judul hero */
+.hero-title {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Mengatur warna dan lebar maksimal teks deskripsi hero */
+.hero-sub {
+    color: #F3E4D2;
+    max-width: 34rem;
+}
+
+/* Mengatur tampilan tombol pada bagian hero */
+.btn-hero {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    font-weight: bold;
+}
+
+/* Mengubah warna tombol hero ketika mouse diarahkan */
+.btn-hero:hover {
+    background: #fff;
+    color: var(--sbd-brown);
+}
+
+/* Mengatur strip informasi di bawah bagian hero */
+.hero-strip {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    text-align: center;
+    font-weight: bold;
+    padding: .6rem 1rem;
+}
+
+/* =========================================
+   14. TAMPILAN NOTA PEMBELIAN
+   ========================================= */
+.nota {
+    /* Mengatur warna, lebar, dan ukuran maksimal nota */
+    background: #FFFDF9;
+    color: var(--sbd-brown-dark);
+    width: 100%;
+    max-width: 280px;
+
+    /* Mengatur jarak isi nota dari tepi */
+    padding: 1rem 1.1rem;
+
+    /* Membuat sudut nota sedikit melengkung */
+    border-radius: 4px;
+
+    /* Menggunakan font seperti tulisan pada struk */
+    font-family: 'Courier New', monospace;
+    font-size: .85rem;
+
+    /* Memberikan bayangan dan sedikit kemiringan pada nota */
+    box-shadow: 0 6px 0 rgba(0, 0, 0, .15);
+    transform: rotate(2deg);
+}
+
+/* Mengatur judul pada nota */
+.nota-judul {
+    font-family: 'Chewy', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+    color: var(--sbd-rust);
+}
+
+/* Mengatur keterangan kecil di bawah judul nota */
+.nota-ket {
+    text-align: center;
+    margin: 0 0 .5rem;
+    font-size: .75rem;
+    color: #6E5A4E;
+}
+
+/* Mengatur baris informasi nota agar isi kiri dan kanan terpisah */
+.nota-baris {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed var(--sbd-sand);
+    padding: .3rem 0;
+}
+
+/* Memberikan penekanan pada bagian total pembayaran */
+.nota-total {
+    font-weight: bold;
+    border-top: 2px dashed var(--sbd-brown);
+}
+
+/* Mengatur posisi kode nota dan barcode */
+.nota-kode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: .5rem;
+    font-size: .75rem;
+}
+
+/* Membuat tampilan barcode menggunakan garis berulang */
+.barcode {
+    flex: 1;
+    height: 26px;
+    background: repeating-linear-gradient(90deg, #3B2920 0 2px, transparent 2px 4px, #3B2920 4px 5px, transparent 5px 8px);
+}
+
+/* Memberikan animasi nota hanya jika pengguna tidak membatasi gerakan */
+@media (prefers-reduced-motion: no-preference) {
+    /* Membuat perubahan posisi nota berlangsung selama 0.3 detik */
+    .nota {
+        transition: transform .3s;
+    }
+
+    /* Mengembalikan nota ke posisi lurus ketika diarahkan */
+    .nota:hover {
+        transform: rotate(0deg);
+    }
+}
+
+/* =========================================
+   15. PENGULANGAN STYLE TOPBAR, HERO, DAN NOTA
+   ========================================= */
+
+/* Mengatur kembali tampilan topbar */
+.topbar {
+    background-color: var(--sbd-brown);
+    color: #FFF9F0;
+    border-bottom: 4px solid var(--sbd-orange);
+}
+
+/* Mengatur kembali tampilan brand */
+.brand {
+    font-family: 'Chewy', cursive;
+    font-size: 2rem;
+    color: var(--sbd-gold);
+}
+
+/* Mengatur kembali teks deskripsi brand */
+.brand-tag {
+    color: #F3E4D2;
+    font-size: .9rem;
+}
+
+/* Mengatur kembali warna informasi waktu */
+.topbar-time {
+    color: #F3E4D2;
+}
+
+/* Mengatur posisi isi navigasi */
+.site-nav .navbar-collapse {
+    align-items: center;
+}
+
+/* Mengatur kembali ukuran dan posisi tombol ikon */
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--sbd-sand);
+    border-radius: 6px;
+    color: var(--sbd-brown);
+    text-decoration: none;
+}
+
+/* Mengatur efek hover dan focus pada tombol ikon */
+.icon-btn:hover,
+.icon-btn:focus-visible {
+    background-color: var(--sbd-rust);
+    border-color: var(--sbd-rust);
+    color: #fff;
+}
+
+/* Mengatur kembali background dan tampilan hero */
+.hero {
+    background: linear-gradient(120deg, var(--sbd-brown) 0%, var(--sbd-rust-dark) 100%);
+    color: #FFF9F0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Mengatur kembali tampilan label hero */
+.hero-badge {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    font-weight: bold;
+    font-size: .8rem;
+    padding: .25rem .6rem;
+    border-radius: 4px;
+}
+
+/* Mengatur kembali ukuran judul hero */
+.hero-title {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Mengatur kembali deskripsi hero */
+.hero-sub {
+    color: #F3E4D2;
+    max-width: 34rem;
+}
+
+/* Mengatur kembali tombol hero */
+.btn-hero {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    font-weight: bold;
+}
+
+/* Mengatur kembali efek hover tombol hero */
+.btn-hero:hover {
+    background: #fff;
+    color: var(--sbd-brown);
+}
+
+/* Mengatur kembali strip informasi hero */
+.hero-strip {
+    background: var(--sbd-gold);
+    color: var(--sbd-brown);
+    text-align: center;
+    font-weight: bold;
+    padding: .6rem 1rem;
+}
+
+/* Mengatur kembali tampilan nota */
+.nota {
+    background: #FFFDF9;
+    color: var(--sbd-brown-dark);
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 1.1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: .85rem;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, .15);
+    transform: rotate(2deg);
+}
+
+/* Mengatur kembali judul nota */
+.nota-judul {
+    font-family: 'Chewy', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+    color: var(--sbd-rust);
+}
+
+/* Mengatur kembali keterangan nota */
+.nota-ket {
+    text-align: center;
+    margin: 0 0 .5rem;
+    font-size: .75rem;
+    color: #6E5A4E;
+}
+
+/* Mengatur kembali baris informasi nota */
+.nota-baris {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed var(--sbd-sand);
+    padding: .3rem 0;
+}
+
+/* Mengatur kembali bagian total nota */
+.nota-total {
+    font-weight: bold;
+    border-top: 2px dashed var(--sbd-brown);
+}
+
+/* Mengatur kembali posisi kode nota */
+.nota-kode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: .5rem;
+    font-size: .75rem;
+}
+
+/* Mengatur kembali bentuk barcode */
+.barcode {
+    flex: 1;
+    height: 26px;
+    background: repeating-linear-gradient(90deg, #3B2920 0 2px, transparent 2px 4px, #3B2920 4px 5px, transparent 5px 8px);
+}
+
+/* Mengatur kembali animasi nota */
+@media (prefers-reduced-motion: no-preference) {
+    .nota {
+        transition: transform .3s;
+    }
+
+    .nota:hover {
+        transform: rotate(0deg);
+    }
+}
+
+/* =========================================
+   16. PENGATURAN WARNA KOLOM PRODUK PADA TABEL
+   ========================================= */
+
+/* Memberikan warna khusus pada kolom Produk agar berbeda dari kolom lain */
+.table-sbd tbody tr > td.sel-produk {
+    --bs-table-bg-type: #F7E7CE;
+    --bs-table-bg-state: #F7E7CE;
+}
